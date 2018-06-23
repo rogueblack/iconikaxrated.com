@@ -1,0 +1,17 @@
+.app-container {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.app-header {
+  background-color: transparent;
+  height: 50px;
+  padding: 10px;
+  color: #575757;
+}
+
+.header-brand {
+  text-align: left;
+  margin-top: 15px;
+}

@@ -1,0 +1,23 @@
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0f0f0f;
+}
+
+.main-text {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  color: #575757;
+  font-size: 150px;
+  font-weight: 800;
+}
+
+.main-text-sub {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  color: #575757;
+  font-size: 75px;
+  font-weight: 500;
+}
