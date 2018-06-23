@@ -1,12 +1,12 @@
 .main-container {
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   background-color: #0f0f0f;
 }
 
 .main-text {
   position: absolute;
-  top: 35%;
+  margin-top: 15%;
   left: 15%;
   color: #575757;
   font-size: 150px;
@@ -15,7 +15,7 @@
 
 .main-text-sub {
   position: absolute;
-  top: 55%;
+  margin-top: 25%;
   left: 25%;
   color: #575757;
   font-size: 75px;

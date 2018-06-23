@@ -1,0 +1,70 @@
+.cluster-container {
+
+}
+
+.mb-active {
+  position: relative;
+  width: 100%;
+  height: 7200px;
+}
+
+.mb-active .block--views {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.mb-active.mb-fixed .block--views {
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+.mb-active .block__content {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.l-main .view-bolero {
+  overflow: visible;
+}
+.mb-active .view-all-content {
+  -webkit-perspective: 130em;
+  perspective: 130em;
+  -webkit-perspective-origin: center center;
+  perspective-origin: center center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.mb-active.mb-fixed .view-all-content {
+  position: fixed;
+}
+
+.view-layer {
+  transform-style: preserve-3d;
+}
+
+.cluster-img {
+  position: absolute;
+}
+
+#img-1 {
+  width: 45%;
+  transform: translate3d(-5em,30vh,-100em);
+}
+#img-2 {
+  width: 25%;
+  transform: translate3d(-50em,-15vh,-200em);
+}
+#img-3 {
+  width: 15%;
+  transform: translate3d(90em,-50vh,-340em);
+}
+#img-4 {
+  width: 50%;
+  transform: translate3d(-30em,50vh,-420em);
+}

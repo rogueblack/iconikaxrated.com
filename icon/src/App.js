@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Main from './Main.js';
-import Zoom from './Zoom.js';
+import Cluster from './Cluster.js';
 
 class App extends Component {
   render() {
@@ -11,7 +11,8 @@ class App extends Component {
           <div className="header-brand">menu</div>
         </header>
         <Main />
-        <Zoom />
+        <Cluster />
+        <Main />
       </div>
     );
   }
