@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Druk Web';
+  background-color: #0f0f0f;
+}
+
+@font-face {
+  font-family: 'Druk Web';
+  src: url(//cache.umusic.com/_sites/theweeknd.com/fonts/druk/Druk-Bold-Web.eot);
+  src: url(//cache.umusic.com/_sites/theweeknd.com/fonts/druk/Druk-Bold-Web.eot?#iefix) format("embedded-opentype"),url(//cache.umusic.com/_sites/theweeknd.com/fonts/druk/Druk-Bold-Web.woff2) format("woff2"),url(//cache.umusic.com/_sites/theweeknd.com/fonts/druk/Druk-Bold-Web.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal
+}
+
+@font-face {
+  font-family: 'Druk Wide Web';
+  src: url(//cache.umusic.com/_sites/theweeknd.com/fonts/druk/DrukWide-Medium-Web.eot);
+  src: url(//cache.umusic.com/_sites/theweeknd.com/fonts/druk/DrukWide-Medium-Web.eot?#iefix) format("embedded-opentype"),url(//cache.umusic.com/_sites/theweeknd.com/fonts/druk/DrukWide-Medium-Web.woff2) format("woff2"),url(//cache.umusic.com/_sites/theweeknd.com/fonts/druk/DrukWide-Medium-Web.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal
+}
+
+@font-face {
+  font-family: fontello;
+  src: url(//cache.umusic.com/_sites/_asf/icons/font/fontello.eot?21517319);
+  src: url(//cache.umusic.com/_sites/_asf/icons/fontello.eot?21517319#iefix) format("embedded-opentype"),url(//cache.umusic.com/_sites/_asf/icons/font/fontello.woff?21517319) format("woff"),url(//cache.umusic.com/_sites/_asf/icons/font/fontello.ttf?21517319) format("truetype"),url(//cache.umusic.com/_sites/_asf/icons/font/fontello.svg?21517319#fontello) format("svg");
+  font-weight: 400;
+  font-style: normal
+}
