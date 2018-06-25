@@ -28,9 +28,9 @@ class Album extends Component {
     function slideOut(even, el) {
       var newX;
       if (even) {
-        newX = -150;
+        newX = -100;
       } else {
-        newX = 150;
+        newX = 100;
       }
       el.style.transform = "translateX("+newX+"%)";
       el.style.opacity = "0";

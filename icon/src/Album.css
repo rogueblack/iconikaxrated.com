@@ -36,7 +36,7 @@
   display: flex;
   margin: auto;
   flex-wrap: wrap;
-  margin-top: 60px;
+  margin-top: 35vh;
 }
 .track-item{
   width: 100%;
@@ -48,12 +48,10 @@
   transition: all .75s;
 }
 .track-item:nth-child(even){
-  transform: translateX(150%);
-  /* margin-left: -150%; */
+  transform: translateX(100%);
 }
 .track-item:nth-child(odd){
-  transform: translateX(-150%);
-  /* margin-left: 150%; */
+  transform: translateX(-100%);
 }
 
 .track-img{
