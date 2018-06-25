@@ -13,7 +13,7 @@ class Cluster extends Component {
     var contentImg4 = document.querySelector("#img-4");
 
     function setTranslate(yPos, zPos, el) {
-      el.style.transform = "translate3d(0,0px,"+ zPos+"px)";
+      el.style.transform = "translate3d(0,0px,"+ zPos/10+"em)";
     }
 
     window.addEventListener("DOMContentLoaded", scrollLoop, false);
@@ -25,7 +25,6 @@ class Cluster extends Component {
     function scrollLoop() {
         yScrollPosition = window.scrollY;
         clusterCont = $('.cluster-container').offset().top;
-        console.log(yScrollPosition);
 
         if (yScrollPosition >= clusterCont-1 && yScrollPosition <= 7200) {
           $('.mb-active').addClass('mb-fixed');
