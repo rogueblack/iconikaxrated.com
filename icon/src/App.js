@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Main from './Main.js';
+import Album from './Album.js';
 import Cluster from './Cluster.js';
 
 class App extends Component {
@@ -12,7 +13,7 @@ class App extends Component {
         </header>
         <Main />
         <Cluster />
-        <Main />
+        <Album />
       </div>
     );
   }
