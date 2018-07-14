@@ -1,3 +1,9 @@
+/*
+  the more images within the cluster, the greater the distance we travel on
+  the y,z axis, the more height this will need,
+  as well as 
+*/
+
 .cluster-container {
 
 }
@@ -5,7 +11,7 @@
 .mb-active {
   position: relative;
   width: 100%;
-  height: 6700px;
+  height: 12700px;  /* << controls the distance for the zoom scroll effect */
 }
 
 .mb-active .block--views {
@@ -52,19 +58,21 @@
   position: absolute;
 }
 
+
+/* z-index is ordered by front to back */
 #img-1 {
   width: 55%;
-  transform: translate3d(-5em,30vh,-100em);
+  transform: translate3d(-5em, 30vh, -100em);
 }
 #img-2 {
   width: 45%;
-  transform: translate3d(-50em,-15vh,-200em);
+  transform: translate3d(-50em, -15vh, -200em);
 }
 #img-3 {
   width: 25%;
-  transform: translate3d(90em,-50vh,-340em);
+  transform: translate3d(90em, -50vh, -340em);
 }
 #img-4 {
   width: 80%;
-  transform: translate3d(-30em,50vh,-420em);
+  transform: translate3d(-30em, 50vh, -800em);
 }

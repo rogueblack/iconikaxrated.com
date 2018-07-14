@@ -11,6 +11,10 @@ class Cluster extends Component {
     var contentImg2 = document.querySelector("#img-2");
     var contentImg3 = document.querySelector("#img-3");
     var contentImg4 = document.querySelector("#img-4");
+    var contentImg5 = document.querySelector("#img-5");
+    var contentImg6 = document.querySelector("#img-6");
+    var contentImg7 = document.querySelector("#img-7");
+    var contentImg8 = document.querySelector("#img-8");
 
     function setTranslate(yPos, zPos, el) {
       el.style.transform = "translate3d(0,0px,"+ zPos/10+"em)";
@@ -21,12 +25,15 @@ class Cluster extends Component {
     var yScrollPosition;
     var clusterCont;
 
+    // this value is related to the css prop:  .mb-active{height}
+    const maxDistance = 14200;
+
 
     function scrollLoop() {
         yScrollPosition = window.scrollY;
         clusterCont = $('.cluster-container').offset().top;
 
-        if (yScrollPosition >= clusterCont-1 && yScrollPosition <= 7200) {
+        if (yScrollPosition >= clusterCont-1 && yScrollPosition <= maxDistance) {
           $('.mb-active').addClass('mb-fixed');
           setTranslate((yScrollPosition - clusterCont), (yScrollPosition - clusterCont), viewLayer);
           // setTranslate((yScrollPosition - clusterCont), (yScrollPosition - clusterCont), contentImg1);
