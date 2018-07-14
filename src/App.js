@@ -12,8 +12,18 @@ class App extends Component {
           <div className="header-brand">menu</div>
         </header>
         <Main />
-        <Cluster />
-        <Album />
+        {data.map(album => {
+          return(
+            <span>
+              <Cluster images={album.cluster} />
+              <Album
+                title={album.title}
+                image={album.image}
+                tracks={album.tracks}
+              />
+            </span>
+          );
+        })}
       </div>
     );
   }
