@@ -25,7 +25,9 @@ class Main extends Component {
         xScrollPosition = window.scrollX;
         windowBottom = yScrollPosition + window.innerHeight;
 
-        fadeOut(yScrollPosition, mainTitle);
+        if (yScrollPosition <= window.innerHeight) {
+          fadeOut(yScrollPosition, mainTitle);
+        }
 
         requestAnimationFrame(scrollLoopAlbum);
     }
