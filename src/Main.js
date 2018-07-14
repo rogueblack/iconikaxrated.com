@@ -25,7 +25,7 @@ class Main extends Component {
         xScrollPosition = window.scrollX;
         windowBottom = yScrollPosition + window.innerHeight;
 
-        if (yScrollPosition <= window.innerHeight) {
+        if (yScrollPosition <= window.innerHeight + 500) {
           fadeOut(yScrollPosition, mainTitle);
         }
 
