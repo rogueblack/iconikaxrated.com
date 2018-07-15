@@ -10,8 +10,8 @@ class Main extends Component {
     // fade opacity on scroll
     function fadeOut(scrollY, el) {
       if (scrollY !== 0) {
-        el.style.opacity = 1 - (scrollY/(window.innerHeight*.15));
-        mainImg.style.opacity = 1 - (scrollY/(window.innerHeight*.15));
+        el.style.opacity = 1 - (scrollY/(window.innerHeight * 0.25));
+        mainImg.style.opacity = 1 - (scrollY/(window.innerHeight * 0.75));
       }
     }
 
