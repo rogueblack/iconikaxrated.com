@@ -59,20 +59,40 @@
 }
 
 
-/* z-index is ordered by front to back */
+
+/* x:  */
+/* y:  */
+/* z-index: controls ordering front to back */
 #img-1 {
   width: 55%;
-  transform: translate3d(-5em, 30vh, -100em);
+  transform: translate3d(-5em, 40vh, -100em);
 }
 #img-2 {
-  width: 45%;
-  transform: translate3d(-50em, -15vh, -200em);
+  width: 35%;
+  transform: translate3d(-50em, -15vh, -400em);
 }
 #img-3 {
-  width: 25%;
-  transform: translate3d(90em, -50vh, -340em);
+  width: 35%;
+  transform: translate3d(70em, -50vh, -340em);
 }
 #img-4 {
   width: 80%;
   transform: translate3d(-30em, 50vh, -800em);
+}
+
+#img-5 {
+  width: 30%;
+  transform: translate3d(5em, -10vh, -500em);
+}
+#img-6 {
+  width: 20%;
+  transform: translate3d(-50em, 65vh, -15em);
+}
+#img-7 {
+  width: 25%;
+  transform: translate3d(-30em, -5vh, -20em);
+}
+#img-8 {
+  width: 40%;
+  transform: translate3d(-70em, 5vh, -125em);
 }

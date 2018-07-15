@@ -5,11 +5,13 @@ class Main extends Component {
 
   componentDidMount() {
     var mainTitle = document.querySelector(".main-text");
+    var mainImg = document.querySelector(".main-img");
 
-    //fade opacity on scroll
+    // fade opacity on scroll
     function fadeOut(scrollY, el) {
       if (scrollY !== 0) {
         el.style.opacity = 1 - (scrollY/(window.innerHeight*.15));
+        mainImg.style.opacity = 1 - (scrollY/(window.innerHeight*.15));
       }
     }
 
@@ -17,13 +19,12 @@ class Main extends Component {
 
     var yScrollPosition;
     var xScrollPosition;
-    var windowBottom;
-
+    // var windowBottom;
 
     function scrollLoopAlbum() {
         yScrollPosition = window.scrollY;
         xScrollPosition = window.scrollX;
-        windowBottom = yScrollPosition + window.innerHeight;
+        // windowBottom = yScrollPosition + window.innerHeight;
 
         if (yScrollPosition <= window.innerHeight + 500) {
           fadeOut(yScrollPosition, mainTitle);
