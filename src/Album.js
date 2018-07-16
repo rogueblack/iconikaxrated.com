@@ -18,6 +18,15 @@ class Album extends Component {
       el.style.opacity = (difference/(window.innerHeight*1.15));
     }
 
+    //check if visible
+    function isInViewport(el, windowBottom) {
+      const top = el.offset().top;
+      const offset = 400;
+      console.log(windowBottom);
+      console.log(top);
+      return (top - offset) <= windowBottom;
+    }
+
     window.addEventListener("DOMContentLoaded", scrollLoopAlbum, false);
 
     var yScrollPosition;
@@ -32,6 +41,9 @@ class Album extends Component {
         albumCont = $('.album-container').offset().top;
         windowBottom = yScrollPosition + window.innerHeight;
 
+        const mq = window.matchMedia( "(max-width: 800px)" );
+
+
         // - 500 for a headstart
         if (windowBottom >= albumCont-500) {
 
@@ -39,6 +51,18 @@ class Album extends Component {
           setTranslate(0, (yScrollPosition - albumCont) * -.6, albumTitle);
           //fade in cover img
           fadeIn(windowBottom, albumCont, coverImg);
+
+          //mobile only
+          if (mq.matches) {
+            $(".track-item").each(function(i) {
+              //is visible -> show track title
+              if ($(this).offset().top < windowBottom && $(this).offset().top > yScrollPosition) {
+                $('.track-title', this).addClass("appear");
+              } else {
+                $('.track-title', this).removeClass("appear");
+              }
+            });
+          }
         }
 
         requestAnimationFrame(scrollLoopAlbum);

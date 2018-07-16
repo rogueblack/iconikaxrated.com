@@ -34,17 +34,17 @@ class App extends Component {
             {
               title: 'bitch1',
               track_number: 1,
-              image: '/images/albums/indecent-exposure/2018_05_31_05_34_32859164_2033770666862651_1035702814782783488_n.jpg',
+              image: '/images/2.jpg',
             },
             {
               title: 'bitch2',
               track_number: 2,
-              image: '/images/albums/indecent-exposure/2018_05_31_05_34_32859164_2033770666862651_1035702814782783488_n.jpg',
+              image: '/images/3.jpg',
             },
             {
               title: 'bitch3',
               track_number: 3,
-              image: '/images/albums/indecent-exposure/2018_05_31_05_34_32859164_2033770666862651_1035702814782783488_n.jpg',
+              image: '/images/lib/1236706229276808394.jpg',
             },
           ]
         }
