@@ -18,24 +18,6 @@ class Album extends Component {
       el.style.opacity = (difference/(window.innerHeight*1.15));
     }
 
-    //bring to center and make full opacity
-    function slideIn(el) {
-      el.style.transform = "translateX(0%)";
-      el.style.opacity = "1";
-    }
-
-    //Push out the opposite direction and fade opacity
-    function slideOut(even, el) {
-      var newX;
-      if (even) {
-        newX = -100;
-      } else {
-        newX = 100;
-      }
-      el.style.transform = "translateX("+newX+"%)";
-      el.style.opacity = "0";
-    }
-
     window.addEventListener("DOMContentLoaded", scrollLoopAlbum, false);
 
     var yScrollPosition;
@@ -57,90 +39,48 @@ class Album extends Component {
           setTranslate(0, (yScrollPosition - albumCont) * -.6, albumTitle);
           //fade in cover img
           fadeIn(windowBottom, albumCont, coverImg);
-
-          $(".track-item").each(function(i) {
-            //top is visible -> slide in
-            //top is outside bounds -> slide out
-            if ($(this).offset().top < windowBottom && $(this).offset().top > yScrollPosition) {
-              slideIn(this);
-            } else if ($(this).offset().top < yScrollPosition) {
-              slideOut(i % 2, this);
-            }
-          });
         }
 
         requestAnimationFrame(scrollLoopAlbum);
     }
+
+    $(".track-item").hover(function(){
+      $('.track-title', this).addClass("appear");
+      }, function(){
+      $('.track-title', this).removeClass("appear");
+    });
+  }
+
+  constructor(props) {
+    super(props);
   }
 
   render() {
+    const albumTitle = this.props.title;
+    const albumImage = 'url('+ this.props.image +')';
+    const tracks = this.props.tracks;
+
     return (
       <div className="album-container">
         <div className="cover-img-container">
-          <div className="cover-img"></div>
-          <div className="album-title">xrated</div>
+          <div className="cover-img"
+            style={{ backgroundImage: albumImage }}></div>
+          <div className="album-title">{albumTitle}</div>
         </div>
         <div className="tracks-container">
-          <div className="track-item">
-            <div className="track-img"></div>
-            <div className="track-title">
-              WILD BITCH SHOW
+
+          {tracks.map((track, i) =>
+            <div className="track-item" key={'track_' + i}>
+              <div className="track-img"
+                style={{ backgroundImage: 'url('+ track.image +')' }}></div>
+              <div className="track-title">
+                <span>
+                  {track.title}
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="track-item">
-            <div className="track-img"></div>
-            <div className="track-title">
-              WILD BITCH SHOW
-            </div>
-          </div>
-          <div className="track-item">
-            <div className="track-img"></div>
-            <div className="track-title">
-              WILD BITCH SHOW
-            </div>
-          </div>
-          <div className="track-item">
-            <div className="track-img"></div>
-            <div className="track-title">
-              WILD BITCH SHOW
-            </div>
-          </div>
-          <div className="track-item">
-            <div className="track-img"></div>
-            <div className="track-title">
-              WILD BITCH SHOW
-            </div>
-          </div>
-          <div className="track-item">
-            <div className="track-img"></div>
-            <div className="track-title">
-              WILD BITCH SHOW
-            </div>
-          </div>
-          <div className="track-item">
-            <div className="track-img"></div>
-            <div className="track-title">
-              WILD BITCH SHOW
-            </div>
-          </div>
-          <div className="track-item">
-            <div className="track-img"></div>
-            <div className="track-title">
-              WILD BITCH SHOW
-            </div>
-          </div>
-          <div className="track-item">
-            <div className="track-img"></div>
-            <div className="track-title">
-              WILD BITCH SHOW
-            </div>
-          </div>
-          <div className="track-item">
-            <div className="track-img"></div>
-            <div className="track-title">
-              WILD BITCH SHOW
-            </div>
-          </div>
+          )}
+
         </div>
       </div>
     );

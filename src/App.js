@@ -6,18 +6,13 @@ import Cluster from './Cluster.js';
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
-
   render() {
     let data = {
       albums: [
         {
           album_id: "album-0",
           title: "xrated",
-          image: '',
+          image: '/images/albums/indecent-exposure/2018_06_09_02_31_Bjzq_BbFrsA34494530_636404740043526_2977778706958778368_n.jpg',
 
           cluster: [
             '/images/lib/1267203891578967859.jpg',
@@ -29,13 +24,28 @@ class App extends Component {
             '/images/lib/1236706229276808394.jpg',
             '/images/lib/1242698258343434001.jpg',
           ],
-        
+
           tracks: [
             {
               title: 'bitch',
               track_number: 0,
-              image: '',
-            }
+              image: '/images/albums/indecent-exposure/2018_05_31_05_34_32859164_2033770666862651_1035702814782783488_n.jpg',
+            },
+            {
+              title: 'bitch1',
+              track_number: 1,
+              image: '/images/albums/indecent-exposure/2018_05_31_05_34_32859164_2033770666862651_1035702814782783488_n.jpg',
+            },
+            {
+              title: 'bitch2',
+              track_number: 2,
+              image: '/images/albums/indecent-exposure/2018_05_31_05_34_32859164_2033770666862651_1035702814782783488_n.jpg',
+            },
+            {
+              title: 'bitch3',
+              track_number: 3,
+              image: '/images/albums/indecent-exposure/2018_05_31_05_34_32859164_2033770666862651_1035702814782783488_n.jpg',
+            },
           ]
         }
       ]
@@ -55,10 +65,9 @@ class App extends Component {
         <Main />
         {data.albums.map((album, i) => {
           return(
-            <span>
-              <Cluster key={"cluster_"+i} images={album.cluster} />
+            <span key={"album_"+i}>
+              <Cluster images={album.cluster} />
               <Album
-                key={"album_"+i}
                 title={album.title}
                 image={album.image}
                 tracks={album.tracks}
