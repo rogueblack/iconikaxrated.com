@@ -1,0 +1,17 @@
+/* MOBILE */
+@media (max-width: 768px) {
+
+  /* MAIN */
+  .main-img-content{
+    object-fit: cover;
+    width: 100%;
+  }
+
+  /* ALBUM */
+  .album-container .cover-img-container{
+    width: 100%;
+  }
+  .cover-img{
+    background-position: center;
+  }
+}

@@ -16,3 +16,61 @@
   text-align: left;
   margin-top: 15px;
 }
+
+.hamburger{
+  width: 30px;
+  opacity: 0;
+	-webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+	z-index: 3;
+}
+.hamburger:hover{
+  opacity: 1 !important;
+}
+.hamburger .burgerLine{
+  height: 1px;
+	opacity: 1;
+  width: 25px;
+  background-color: #fff;
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #fff;
+}
+.burgerLine1{
+  margin-top: 11px;
+}
+.burgerLine2{
+  margin-top: 19px;
+}
+.burgerLine3{
+  margin-top: 27px;
+}
+
+.app-footer{
+  height: 200px;
+  width: 100vw;
+  padding: 20px 0;
+  background-color: #000;
+}
+
+.newsletter-btn{
+  width: fit-content;
+  margin: auto;
+  border: 1px solid #fff;
+  padding: 9px 15px;
+  border-radius: 20px;
+  margin-top: 50px;
+  cursor: pointer;
+  color: #fff;
+}
+.newsletter-btn:hover{
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+.newsletter-btn span{
+  font-size: 25px;
+  letter-spacing: 1.5px;
+}

@@ -1,7 +1,7 @@
 /*
   the more images within the cluster, the greater the distance we travel on
   the y,z axis, the more height this will need,
-  as well as 
+  as well as
 */
 
 .cluster-container {
@@ -11,7 +11,7 @@
 .mb-active {
   position: relative;
   width: 100%;
-  height: 12700px;  /* << controls the distance for the zoom scroll effect */
+  height: 10000px;  /* << controls the distance for the zoom scroll effect */
 }
 
 .mb-active .block--views {
@@ -63,36 +63,36 @@
 /* x:  */
 /* y:  */
 /* z-index: controls ordering front to back */
+#img-0 {
+  width: 55em;
+  transform: translate3d(-5vw, 40vh, -100em);
+}
 #img-1 {
-  width: 55%;
-  transform: translate3d(-5em, 40vh, -100em);
+  width: 35em;
+  transform: translate3d(-50vw, -15vh, -400em);
 }
 #img-2 {
-  width: 35%;
-  transform: translate3d(-50em, -15vh, -400em);
+  width: 35em;
+  transform: translate3d(70vw, -50vh, -340em);
 }
 #img-3 {
-  width: 35%;
-  transform: translate3d(70em, -50vh, -340em);
-}
-#img-4 {
-  width: 80%;
-  transform: translate3d(-30em, 50vh, -800em);
+  width: 80em;
+  transform: translate3d(-30vw, 50vh, -800em);
 }
 
+#img-4 {
+  width: 30em;
+  transform: translate3d(5vw, -10vh, -500em);
+}
 #img-5 {
-  width: 30%;
-  transform: translate3d(5em, -10vh, -500em);
+  width: 20em;
+  transform: translate3d(-50vw, 65vh, -15em);
 }
 #img-6 {
-  width: 20%;
-  transform: translate3d(-50em, 65vh, -15em);
+  width: 25em;
+  transform: translate3d(-30vw, -5vh, -20em);
 }
 #img-7 {
-  width: 25%;
-  transform: translate3d(-30em, -5vh, -20em);
-}
-#img-8 {
-  width: 40%;
-  transform: translate3d(-70em, 5vh, -125em);
+  width: 40em;
+  transform: translate3d(-70vw, 5vh, -125em);
 }

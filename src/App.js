@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './mediaStyles.css';
 import Main from './Main.js';
 import Album from './Album.js';
 import Cluster from './Cluster.js';
@@ -11,7 +12,7 @@ class App extends Component {
       albums: [
         {
           album_id: "album-0",
-          title: "xrated",
+          title: "XRATED",
           image: '/images/albums/indecent-exposure/2018_06_09_02_31_Bjzq_BbFrsA34494530_636404740043526_2977778706958778368_n.jpg',
 
           cluster: [
@@ -27,24 +28,24 @@ class App extends Component {
 
           tracks: [
             {
-              title: 'bitch',
-              track_number: 0,
-              image: '/images/albums/indecent-exposure/2018_05_31_05_34_32859164_2033770666862651_1035702814782783488_n.jpg',
+              title: 'PUSSY GALORE',
+              track_number: 'one',
+              image: '/images/lib/1409005908399033469.jpg',
             },
             {
-              title: 'bitch1',
-              track_number: 1,
-              image: '/images/2.jpg',
+              title: 'WILD BITCH SHOW',
+              track_number: 'two',
+              image: '/images/lib/1440986053405947107.jpg',
             },
             {
-              title: 'bitch2',
-              track_number: 2,
-              image: '/images/3.jpg',
+              title: 'LATE NIGHTS',
+              track_number: 'three',
+              image: '/images/lib/1534376329642221129.jpg',
             },
             {
-              title: 'bitch3',
-              track_number: 3,
-              image: '/images/lib/1236706229276808394.jpg',
+              title: 'SLANDER',
+              track_number: 'four',
+              image: '/images/lib/1551935225562879597.jpg',
             },
           ]
         }
@@ -55,11 +56,11 @@ class App extends Component {
       <div className="app-container">
         <header className="app-header">
           <div className="header-menu">
-            <ul>
-              <li className="">
-                <a href=""></a>
-              </li>
-            </ul>
+          <div className="hamburger">
+            <div className="burgerLine burgerLine1"></div>
+            <div className="burgerLine burgerLine2"></div>
+            <div className="burgerLine burgerLine3"></div>
+          </div>
           </div>
         </header>
         <Main />
@@ -75,6 +76,11 @@ class App extends Component {
             </span>
           );
         })}
+        <div className="app-footer">
+          <div className="newsletter-btn">
+            <span>Sign up for the newsletter</span>
+          </div>
+        </div>
       </div>
     );
   }

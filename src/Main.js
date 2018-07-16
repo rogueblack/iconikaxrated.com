@@ -18,13 +18,9 @@ class Main extends Component {
     window.addEventListener("DOMContentLoaded", scrollLoopAlbum, false);
 
     var yScrollPosition;
-    var xScrollPosition;
-    // var windowBottom;
 
     function scrollLoopAlbum() {
         yScrollPosition = window.scrollY;
-        xScrollPosition = window.scrollX;
-        // windowBottom = yScrollPosition + window.innerHeight;
 
         if (yScrollPosition <= window.innerHeight + 500) {
           fadeOut(yScrollPosition, mainTitle);
