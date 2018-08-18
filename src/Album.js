@@ -53,11 +53,15 @@ class Album extends Component {
         requestAnimationFrame(scrollLoopAlbum);
     }
 
-    $(".track-item").hover(function(){
-      $('.track-title', this).addClass("appear");
-      }, function(){
-      $('.track-title', this).removeClass("appear");
-    });
+    $(".track-item").hover (
+      function () {
+        $('.track-title', this).addClass ( "appear" );
+      },
+      function () {
+        $('.track-title', this).removeClass ( "appear" );
+      }
+    );
+
   }
 
 
@@ -69,7 +73,7 @@ class Album extends Component {
     return (
       <div className="album-container">
         <div className="album-title">{albumTitle}</div>
-        <div className="album-text">album out now</div>
+        <div className="album-text">album release</div>
         <div className="album-buttons">
           <a href="https://geo.itunes.apple.com/us/album/indecent-exposure/1246997463?mt=1&app=music" style={{ display: "inline-block", overflow: "hidden", background: "url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/music-lrg.svg) no-repeat", width: "158px", height: "45px", backgroundSize: "contain" }}></a>
           <a href="https://open.spotify.com/album/6zt1eZkJGi0RBSrVUdj4ia?si=UaoOj95mRaimpcBiiGBUHw" style={{ display: "inline-block", overflow: "hidden", background: "url(/images/spotifyBadge.png) no-repeat", width: "158px", height: "60px", backgroundSize: "contain" }}></a>

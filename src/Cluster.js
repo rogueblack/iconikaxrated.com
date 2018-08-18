@@ -12,28 +12,36 @@ class Cluster extends Component {
       el.style.transform = "translate3d(0,0px,"+ zPos/10+"em)";
     }
 
-    window.addEventListener("DOMContentLoaded", scrollLoop, false);
-
     var yScrollPosition;
     var clusterCont;
 
-    // this value is related to the css prop:  .mb-active{height}
+    // => this value is related to the css prop:  .mb-active{height}
     const maxDistance = 11200;
 
-
-    function scrollLoop() {
+    function scrollLoop () {
         yScrollPosition = window.scrollY;
+
+        // todo: what if there are multiple .cluster-container elements..?
+        //    .. need a way to determine target container element 
         clusterCont = $('.cluster-container').offset().top;
 
         if (yScrollPosition >= clusterCont-1 && yScrollPosition <= maxDistance) {
+        
           $('.mb-active').addClass('mb-fixed');
-          setTranslate((yScrollPosition - clusterCont), (yScrollPosition - clusterCont), viewLayer);
+
+          var x = (yScrollPosition - clusterCont);
+          var y = (yScrollPosition - clusterCont);
+          setTranslate(x, y, viewLayer);
+        
         } else {
           $('.mb-active').removeClass('mb-fixed');
+        
         }
 
         requestAnimationFrame(scrollLoop);
     }
+
+    window.addEventListener("DOMContentLoaded", scrollLoop, false);
   }
 
   render() {

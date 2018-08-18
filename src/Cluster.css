@@ -1,8 +1,8 @@
-/*
-  the more images within the cluster, the greater the distance we travel on
-  the y,z axis, the more height this will need,
-  as well as
-*/
+/**
+ * the more images within the cluster, the greater the distance we travel on
+ * the y,z axis, the more height this will need,
+ * as well as
+ */
 
 .cluster-container {
 
@@ -11,7 +11,8 @@
 .mb-active {
   position: relative;
   width: 100%;
-  height: 10000px;  /* << controls the distance for the zoom scroll effect */
+  height: 10000px;
+  /* =>   ^ controls the distance for the zoom scroll effect */
 }
 
 .mb-active .block--views {
@@ -60,9 +61,12 @@
 
 
 
-/* x:  */
-/* y:  */
-/* z-index: controls ordering front to back */
+/**
+ * x: [description]
+ * y: [description]
+ * z-index: controls ordering front to back
+ */
+
 #img-0 {
   width: 55em;
   transform: translate3d(-5vw, 40vh, -100em);

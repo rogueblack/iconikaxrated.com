@@ -7,27 +7,50 @@ class Main extends Component {
     var mainTitle = document.querySelector(".main-text");
     var mainImg = document.querySelector(".main-img");
 
-    // fade opacity on scroll
-    function fadeOut(scrollY, el) {
-      if (scrollY !== 0) {
-        el.style.opacity = 1 - (scrollY/(window.innerHeight * 0.25));
-        mainImg.style.opacity = 1 - (scrollY/(window.innerHeight * 0.75));
-      }
-    }
+    // fades opacity on scroll
+    function fadeOut(scrollY) {
+      
+      // is the scroll position within the viewport (the element's visible display area)..?
+      if (scrollY === 0)
+        return;
+      if (scrollY >= winHeight + 500)
+        return;
+      
+      mainTitle.style.opacity = 1 - (scrollY / (winHeight * 0.45));
 
-    window.addEventListener("DOMContentLoaded", scrollLoopAlbum, false);
+      // => take a fraction of the scroll-change..
+      // => then add the fractional value onto the calculated value..  
+      // => thus, what remains is the "eased" value, who's change is increasingly/decreasingly accelerated..
+      var ease = (scrollY * 0.195);
+      var opacity = 1 - (scrollY / (winHeight * 0.98));
+      opacity = opacity * ease;
+      mainImg.style.opacity = opacity;
+
+      // => ease the y-position of the main image,
+      // => so it scrolls at a slower rate than the text
+      // var ease = 1 - (scrollY / 0.095); // => moves faster..
+      var ease = (scrollY / -0.195);
+      var yPos = (ease / (winHeight / 2));
+      // var yPos = (winHeight / 2) / ease;
+      yPos = Math.round(yPos * 100);
+      console.info('yPos:', yPos);
+
+      mainImg.style.transform = "translate3d(0, "+yPos+"px, -99px)";
+
+    }
 
     var yScrollPosition;
+    var winHeight;
 
-    function scrollLoopAlbum() {
-        yScrollPosition = window.scrollY;
-
-        if (yScrollPosition <= window.innerHeight + 500) {
-          fadeOut(yScrollPosition, mainTitle);
-        }
-
-        requestAnimationFrame(scrollLoopAlbum);
+    function mainScroll() {
+      yScrollPosition = window.scrollY;
+      winHeight = window.innerHeight;
+      fadeOut(yScrollPosition);
+      requestAnimationFrame(mainScroll);
     }
+
+
+    window.addEventListener("DOMContentLoaded", mainScroll, false);
   }
 
   render() {
