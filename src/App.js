@@ -20,10 +20,11 @@ class App extends Component {
             '/images/2.jpg',
             '/images/3.jpg',
             '/images/alleyesonme.jpg',
-            '/images/lib/2018_06_14_04_08_Bj_bl5QlUXx33835066_1964685623562756_6985455241097379840_n.jpg',
-            '/images/lib/2018_06_21_01_59_34982590_1820864981270253_6160271274825220096_n.jpg',
-            '/images/lib/1236706229276808394.jpg',
-            '/images/lib/1242698258343434001.jpg',
+            '/images/gonewiththewind.jpg',
+            '/images/alleyesonme.jpg',
+            '/images/eyeswideshut.jpg',
+            '/images/forphlo.jpg',
+            // '/images/thewicked.jpg',
           ],
 
           tracks: [

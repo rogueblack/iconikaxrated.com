@@ -9,7 +9,8 @@ class Cluster extends Component {
     var viewLayer = document.querySelector(".view-layer");
 
     function setTranslate(yPos, zPos, el) {
-      el.style.transform = "translate3d(0,0px,"+ zPos/10+"em)";
+      var zpos = zPos / 10;
+      el.style.transform = "translate3d(0,0px,"+ zpos +"em)";
     }
 
     var yScrollPosition;
@@ -17,15 +18,16 @@ class Cluster extends Component {
 
     // => this value is related to the css prop:  .mb-active{height}
     const maxDistance = 11200;
+    // const maxDistance = 10000;
 
     function scrollLoop () {
         yScrollPosition = window.scrollY;
 
         // todo: what if there are multiple .cluster-container elements..?
         //    .. need a way to determine target container element 
-        clusterCont = $('.cluster-container').offset().top;
+        clusterCont = $('.cluster-container').offset().top+50;
 
-        if (yScrollPosition >= clusterCont-1 && yScrollPosition <= maxDistance) {
+        if (yScrollPosition >= clusterCont-1 && yScrollPosition <= (maxDistance + 11000)) {
         
           $('.mb-active').addClass('mb-fixed');
 

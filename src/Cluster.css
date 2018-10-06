@@ -11,7 +11,7 @@
 .mb-active {
   position: relative;
   width: 100%;
-  height: 10000px;
+  height: 11000px;
   /* =>   ^ controls the distance for the zoom scroll effect */
 }
 
